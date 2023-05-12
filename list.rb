@@ -12,13 +12,13 @@ class MyList
   end
 end
 
-list = MyList.new(1,2,3,4,)
+list = MyList.new(1, 2, 3, 4)
 
-puts(list.all? { |e| e < 5})
-puts(list.all? { |e| e > 5})
+puts(list.all? { |e| e < 5 })
+puts(list.all? { |e| e > 5 })
 
-puts(list.all? { |e| e == 2})
-puts(list.all? { |e| e == 3})
+puts(list.any? { |e| e == 2 })
+puts(list.any? { |e| e == 5 })
 
 p(list.filter(&:even?))
-p(list.filter { |x| x >= 2})
+p(list.filter { |x| x >= 2 })
